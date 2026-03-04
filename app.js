@@ -9,9 +9,9 @@ import path from 'path';
 
 //_________________________ENDPOINTS_______________________________________
 //____________________________GET__________________________________________
-//Serve frontend
-app.get("/", (req, res) => {
-    res.sendFile(path.resolve("public/frontpage/frontpage.html"))
+//Serve frontpage
+app.get('/', (req, res) => {
+    res.sendFile(path.resolve('public/frontpage/frontpage.html'))
 });
 
 //____________________________POST__________________________________________
