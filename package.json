@@ -4,10 +4,10 @@
   "description": "",
   "main": "app.js",
   "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+ "scripts": {
+    "start-dev": "cross-env PORT=8080 NODE_ENV=DEV node app.js",
+    "start-prod": "cross-env PORT=80 node app.js"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gustavtjac/Mandatory-1-node.js---Documentation-site.git"
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/gustavtjac/Mandatory-1-node.js---Documentation-site#readme",
   "dependencies": {
+    "cross-env": "^10.1.0",
     "express": "^5.2.1"
   },
   "devDependencies": {

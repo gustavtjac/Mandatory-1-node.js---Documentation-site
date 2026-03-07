@@ -8,25 +8,18 @@ app.use(express.static('public'));
 import path from 'path';
 
 //_________________________ENDPOINTS_______________________________________
-//____________________________GET__________________________________________
+//___________________________SITES_________________________________________
 //Serve frontpage
 app.get('/', (req, res) => {
     res.sendFile(path.resolve('public/frontpage/frontpage.html'))
 });
 
-//____________________________POST__________________________________________
+//____________________________API__________________________________________
 
+const PORT = process.env.PORT || 8080;
 
-//_________________________PUT/PATCH________________________________________
-
-
-//___________________________DELETE_________________________________________
-
-
-
-//___________________________LISTEN_________________________________________
-app.listen(8080, () => {
-    console.log("Server running on port 8080")
+const server = app.listen(PORT, () => {
+    console.log("Server running on port " + server.address().port)
 });
 
 
