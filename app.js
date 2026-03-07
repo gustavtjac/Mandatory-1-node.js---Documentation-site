@@ -11,7 +11,7 @@ import path from 'path';
 //___________________________SITES_________________________________________
 //Serve frontpage
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve('public/frontpage/frontpage.html'))
+    res.sendFile(path.resolve('public/pages/frontpage/frontpage.html'))
 });
 
 //____________________________API__________________________________________
