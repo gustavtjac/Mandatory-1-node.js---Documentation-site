@@ -17,7 +17,12 @@ app.get('/', (req, res) => {
     res.sendFile(path.resolve('public/pages/frontpage/frontpage.html'))
 });
 
+app.get('/about', (req, res) => {
+    res.sendFile(path.resolve('public/pages/about/about.html'))
+});
 
+
+//____________________________API__________________________________________
 
 app.get('/api/notes', (req, res) => {
     res.send({ data: getAllNotes() })
@@ -33,8 +38,6 @@ app.get('/api/notes/:note', (req, res) => {
 
     res.send({ data: note })
 });
-
-//____________________________API__________________________________________
 
 const PORT = process.env.PORT || 8080;
 
