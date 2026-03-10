@@ -1,6 +1,15 @@
 const darkModeToggleButton = document.getElementById("theme-toggle");
 
-  darkModeToggleButton.addEventListener("click", () => {
+if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.classList.add("dark");
+    darkModeToggleButton.textContent = "🌙";
+} else {
+    darkModeToggleButton.textContent = "☀️";
+}
+
+darkModeToggleButton.addEventListener("click", () => {
     document.documentElement.classList.toggle("dark");
-    darkModeToggleButton.textContent = document.documentElement.classList.contains("dark") ? "🌙" : "☀️";
-  });
+    const isDark = document.documentElement.classList.contains("dark");
+    darkModeToggleButton.textContent = isDark ? "🌙" : "☀️";
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+});

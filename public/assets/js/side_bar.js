@@ -8,7 +8,13 @@ fetch('/api/notes')
     })
     .then(result => {
 
-        return result.data.forEach(noteName => {
+        const sortedData = result.data.sort((a, b) => {
+            const numA = parseInt(a);
+            const numB = parseInt(b);
+            return numA - numB;
+        });
+
+        return sortedData.forEach(noteName => {
 
             const noteOptionDiv = document.createElement("div");
             noteOptionDiv.textContent = noteName.split(".md")[0]
