@@ -5,23 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NoteNode.js | frontpage</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-gray-150 dark:bg-gray-950 text-black dark:text-white">
 
   <!-- Header for my doucmentation site -->
-  <header class="flex items-center justify-between px-6 py-4 border-b border-gray-200 dark:border-gray-800 bg-gray-150 dark:bg-gray-900">
+  <header
+    class="flex items-center justify-between px-6 py-4 border-b border-gray-200 dark:border-gray-800 bg-gray-150 dark:bg-gray-900">
     <a href="/" class="text-grey font-bold text-xl">
       NoteNode<span class="text-blue-400">.js</span>
     </a>
-    <input 
-    type="search" 
-    placeholder="Search..." 
-    class="w-64 px-4 py-1.5 rounded-full bg-gray-200 dark:bg-gray-800 text-sm text-gray-600 dark:text-gray-300 placeholder-gray-400 outline-none focus:ring-2 focus:ring-blue-400"
-  />
+    <input type="search" placeholder="Search..."
+      class="w-64 px-4 py-1.5 rounded-full bg-gray-200 dark:bg-gray-800 text-sm text-gray-600 dark:text-gray-300 placeholder-gray-400 outline-none focus:ring-2 focus:ring-blue-400" />
     <nav class="flex gap-6">
-      <a href="/about" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white transition-colors">About</a>
+      <a href="/about"
+        class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white transition-colors">About</a>
       <button id="theme-toggle" class="text-gray-400 hover:text-white transition-colors">
         🌙
       </button>
@@ -29,36 +30,41 @@
   </header>
 
 
- 
+
 
   <div class="flex">
-     <!-- documenation navigation bar  -->
-  <aside class="w-64 h-screen sticky top-0 border-r border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-4">
-    <nav class="flex flex-col gap-1" id="side-nav-bar">
-      
-    </nav>
-  </aside>
+    <!-- documenation navigation bar  -->
+    <aside
+      class="w-64 h-screen sticky top-0 border-r border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-4">
+      <h2 class="text-lg font-semibold uppercase tracking-widest text-gray-1000 dark:text-gray-00 px-3 mb-2">Notes</h2>
+      <nav class="flex flex-col gap-1" id="side-nav-bar">
 
-  <!-- Main content on frontpage  -->
+      </nav>
+    </aside>
 
-  <main class="flex-1 p-8">
+    <!-- Main content on frontpage  -->
+
+    <main id="main-section" class="flex-1 p-8">
+
+    </main>
+  </div>
+
+
+
+
+
+
+
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+    }
+  </script>
   
-  </main>
-</div>
-
-  
-
-
-
-
-
-
-<script>
-  tailwind.config = {
-    darkMode: "class",
-  }
-</script>
-<script src="assets/js/header.js"></script>
+  <script src="assets/js/header.js"></script>
+  <script type="module" src="assets/js/side_bar.js"></script>
+  <script type="module" src="assets/js/frontpage.js"></script>
 </body>
 
 </html>
