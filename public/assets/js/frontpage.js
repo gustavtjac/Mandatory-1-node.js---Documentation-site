@@ -1,5 +1,6 @@
 const frontPageMainSection = document.getElementById("main-section")
 
+renderNoteOnFrontpage("1. Welcome.md")
 
 export function renderNoteOnFrontpage(noteName) {
     fetch('/api/notes/' + noteName)
