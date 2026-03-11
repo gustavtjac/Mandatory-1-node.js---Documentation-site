@@ -1,0 +1,76 @@
+#main-about-section {
+    @apply flex flex-row gap-6 flex-1 p-8;
+}
+
+#course-section {
+    @apply flex-1 p-6 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm;
+}
+
+#about-section {
+    @apply flex-1 p-6 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm flex flex-col gap-4;
+}
+
+#course-section h1,
+#about-section h1 {
+    @apply text-2xl font-extrabold text-gray-900 dark:text-white mt-1 tracking-tight;
+}
+
+#course-section>p {
+    @apply text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-6;
+}
+
+.requirements-wrapper {
+    @apply space-y-5;
+}
+
+#course-section h2 {
+    @apply flex items-center gap-2 text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-widest mb-3;
+}
+
+#course-section ul {
+    @apply space-y-2;
+}
+
+#course-section li {
+    @apply flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400;
+}
+
+.requirements-divider {
+    @apply border-t border-gray-100 dark:border-gray-800 pt-5;
+}
+
+.dot {
+    @apply w-2 h-2 rounded-full inline-block;
+}
+
+.dot.green {
+    @apply bg-green-400;
+}
+
+.dot.blue {
+    @apply bg-blue-400;
+}
+
+.check {
+    @apply mt-0.5;
+}
+
+.check.green {
+    @apply text-green-400;
+}
+
+.check.blue {
+    @apply text-blue-400;
+}
+
+#profile-image {
+    @apply w-[250px] h-[250px] object-cover rounded-full border-2 border-gray-200 dark:border-gray-700;
+}
+
+#about-section h2 {
+    @apply text-base font-bold text-gray-800 dark:text-white mb-2;
+}
+
+#about-section p {
+    @apply text-sm text-gray-500 dark:text-gray-400 leading-relaxed;
+}

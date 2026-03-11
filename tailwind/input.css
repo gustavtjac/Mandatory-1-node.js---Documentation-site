@@ -3,4 +3,5 @@
 @import "./mainSection.css";
 @import "./main.css";
 @import "./sidebar.css";
+@import "./aboutMainSection.css";
 @variant dark (&:where(.dark, .dark *));

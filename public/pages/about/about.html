@@ -33,86 +33,70 @@
 
     <div class="flex">
         <!-- Main content on frontpage -->
-        <main id="main-section" class="flex flex-row gap-6 flex-1 p-8">
+        <main id="main-about-section">
 
             <!-- Node.js Course Section -->
-            <section
-                class="flex-1 p-6 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm">
+            <section id="course-section">
 
-                <div class="mb-5">
-                    <h1 class="text-2xl font-extrabold text-gray-900 dark:text-white mt-1 tracking-tight">Node.js Course
-                    </h1>
+                <div>
+                    <h1>Node.js Course</h1>
                 </div>
 
-                <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
+                <p>
                     This project is made my first mandatory assignment given in my Node.js course at Erhvervsakademi
                     København. The purpose of the site is to illustrate and document all of the topics than we have gone
                     over so far this semester.
                 </p>
 
-                <div class="space-y-5">
+                <div class="requirements-wrapper">
                     <div>
-                        <h2
-                            class="flex items-center gap-2 text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-widest mb-3">
-                            <span class="w-2 h-2 rounded-full bg-green-400 inline-block"></span>
+                        <h2>
+                            <span class="dot green"></span>
                             Requirements for this project
                         </h2>
-                        <ul class="space-y-2">
-                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400"><span
-                                    class="text-green-400 mt-0.5">✓</span>Serve the pages with Express.js</li>
-                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400"><span
-                                    class="text-green-400 mt-0.5">✓</span>Use Server-Side Rendering (SSR)</li>
-                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400"><span
-                                    class="text-green-400 mt-0.5">✓</span>Split up the documentation in pages rather
-                                than one long HTML page</li>
-                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400"><span
-                                    class="text-green-400 mt-0.5">✓</span>Should have some nice styling (custom or with
-                                a styling framework)</li>
-                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400"><span
-                                    class="text-green-400 mt-0.5">✓</span>Make sure that the repository doesn't contain
-                                files that shouldn't be there</li>
+                        <ul>
+                            <li><span class="check green">✓</span>Serve the pages with Express.js</li>
+                            <li><span class="check green">✓</span>Use Server-Side Rendering (SSR)</li>
+                            <li><span class="check green">✓</span>Split up the documentation in pages rather than one
+                                long HTML page</li>
+                            <li><span class="check green">✓</span>Should have some nice styling (custom or with a
+                                styling framework)</li>
+                            <li><span class="check green">✓</span>Make sure that the repository doesn't contain files
+                                that shouldn't be there</li>
                         </ul>
                     </div>
 
-                    <div class="border-t border-gray-100 dark:border-gray-800 pt-5">
-                        <h2
-                            class="flex items-center gap-2 text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-widest mb-3">
-                            <span class="w-2 h-2 rounded-full bg-blue-400 inline-block"></span>
+                    <div class="requirements-divider">
+                        <h2>
+                            <span class="dot blue"></span>
                             Requirements for the documentation
                         </h2>
-                        <ul class="space-y-2">
-                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400"><span
-                                    class="text-blue-400 mt-0.5">✓</span>Should contain terminal commands</li>
-                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400"><span
-                                    class="text-blue-400 mt-0.5">✓</span>Should contain code snippets</li>
-                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400"><span
-                                    class="text-blue-400 mt-0.5">✓</span>Should contain all the tools we've used and
-                                explain them</li>
-                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400"><span
-                                    class="text-blue-400 mt-0.5">✓</span>Should cover all the theory (learning goals)
-                                that we've touched upon</li>
+                        <ul>
+                            <li><span class="check blue">✓</span>Should contain terminal commands</li>
+                            <li><span class="check blue">✓</span>Should contain code snippets</li>
+                            <li><span class="check blue">✓</span>Should contain all the tools we've used and explain
+                                them</li>
+                            <li><span class="check blue">✓</span>Should cover all the theory (learning goals) that we've
+                                touched upon</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
             <!-- About Me Section -->
-            <section
-                class="flex-1 p-6 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm flex flex-col gap-4">
-
-                <div class="mb-1">
-                    <h1 class="text-2xl font-extrabold text-gray-900 dark:text-white mt-1 tracking-tight">About me</h1>
-                </div>
-
-                <img src="assets/images/me.jpg" alt="Photo of Gustav Torup Jacobsen"
-                    class="w-[250px] h-[250px] object-cover rounded-full border-2 border-gray-200 dark:border-gray-700" />
+            <section id="about-section">
 
                 <div>
-                    <h2 class="text-base font-bold text-gray-800 dark:text-white mb-2">Gustav Torup Jacobsen</h2>
-                    <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                    <h1>About me</h1>
+                </div>
+
+                <img src="assets/images/me.jpg" alt="Photo of Gustav Torup Jacobsen" id="profile-image" />
+
+                <div>
+                    <h2>Gustav Torup Jacobsen</h2>
+                    <p>
                         Im currently studying computer science at Ehvervsakademi København where i will finish jan.
-                        2027.
-                        Coding is my passion Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                        2027. Coding is my passion Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
                         voluptates, error facere excepturi exercitationem voluptas reprehenderit, id dolorem odit
                         praesentium tempora quia provident necessitatibus aliquam? Facilis laborum quam sit sint?
                     </p>
