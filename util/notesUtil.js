@@ -23,7 +23,6 @@ export function getAllNotes() {
 }
 
 
-
 export function getNoteByNumber(number) {
     return notesCache.get(number).note;
 }
