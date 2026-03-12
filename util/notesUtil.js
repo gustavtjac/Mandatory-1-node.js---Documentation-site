@@ -11,7 +11,7 @@ export function getNote(noteName) {
     }
 }
 
-const notesCache = new Map(
+export const notesCache = new Map(
     fs.readdirSync('public/assets/notes').map(name => [parseInt(name), {
         name: name,
         note: getNote(name)
