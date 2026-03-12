@@ -2,10 +2,6 @@ import fs from 'fs';
 import path from 'path';
 import { marked } from 'marked';
 
-export function getAllNotes(){
-   return fs.readdirSync(path.resolve('public/assets/notes'));
-}
-
 export function getNote(noteName) {
     try {
         const rawFile = fs.readFileSync(path.resolve('public/assets/notes/' + noteName), 'utf-8')
@@ -13,4 +9,21 @@ export function getNote(noteName) {
     } catch (err) {
         return null
     }
+}
+
+const notesCache = new Map(
+    fs.readdirSync('public/assets/notes').map(name => [parseInt(name), {
+        name: name,
+        note: getNote(name)
+    }]) 
+);
+
+export function getAllNotes() {
+    return [...notesCache.values()].map(noteObject => noteObject.name)
+}
+
+
+
+export function getNoteByNumber(number) {
+    return notesCache.get(number).note;
 }

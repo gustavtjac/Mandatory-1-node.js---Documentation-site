@@ -1,4 +1,4 @@
-const frontPageMainSection = document.getElementById("main-section")
+/* const frontPageMainSection = document.getElementById("main-section")
 
 renderNoteOnFrontpage("1. Welcome.md")
 
@@ -10,4 +10,4 @@ export function renderNoteOnFrontpage(noteName) {
             frontPageMainSection.innerHTML = result.data
             hljs.highlightAll()
         })
-}
+} */

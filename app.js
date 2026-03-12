@@ -1,8 +1,6 @@
 "use strict"
 //setup Express.js libary
 import express from 'express';
-import path from 'path';
-import { getAllNotes, getNote } from './util/notesUtil.js';
 
 const app = express();
 //serve public folder as static 
@@ -13,31 +11,26 @@ app.use(express.static('public'));
 //_________________________ENDPOINTS_______________________________________
 //___________________________SITES_________________________________________
 //Serve frontpage
+import { frontpagePage, aboutPage } from './util/pagesUtil.js';
+
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve('public/pages/frontpage/frontpage.html'))
+    res.send(frontpagePage(1))
 });
+
+app.get('/notes/:note', (req, res) => {
+
+    const noteIdentifier = parseInt(req.params.note);
+
+    res.send(frontpagePage(noteIdentifier))
+
+})
 
 app.get('/about', (req, res) => {
-    res.sendFile(path.resolve('public/pages/about/about.html'))
+    res.send(aboutPage)
 });
 
 
-//____________________________API__________________________________________
 
-app.get('/api/notes', (req, res) => {
-    res.send({ data: getAllNotes() })
-});
-
-app.get('/api/notes/:note', (req, res) => {
-
-    const note = getNote(req.params.note);
-
-    if (!note) {
-        return res.status(400).send({ errorMessage: "Note with name " + req.params.note + ' could not be found' });
-    }
-
-    res.send({ data: note })
-});
 
 const PORT = process.env.PORT || 8080;
 

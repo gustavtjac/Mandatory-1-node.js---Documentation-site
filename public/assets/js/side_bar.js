@@ -1,4 +1,4 @@
-import { renderNoteOnFrontpage } from "./frontpage.js";
+/* import { renderNoteOnFrontpage } from "./frontpage.js";
 
 const sideNavBar = document.getElementById("side-nav-bar")
 
@@ -33,3 +33,4 @@ fetch('/api/notes')
         });
     })
 
+ */

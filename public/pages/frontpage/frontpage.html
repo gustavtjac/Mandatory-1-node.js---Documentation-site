@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="assets/images/logo.png" type="image/png">
+  <link rel="shortcut icon" href="/assets/images/logo.png" type="image/png">
   <title>NoteNode.js | frontpage</title>
-  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-dark.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
 </head>
@@ -14,35 +14,19 @@
 <body>
 
   <!-- Header for my doucmentation site -->
-  <header>
-    <a href="/">
-      NoteNode<span>.js</span>
-    </a>
-    <input type="search" placeholder="Search..."/>
-    <nav>
-      <a href="/about">About</a>
-      <button id="theme-toggle">
-        🌙
-      </button>
-    </nav>
-  </header>
+{{header}}
 
 
 
 
   <div class="flex">
     <!-- documenation navigation bar  -->
-    <aside>
-      <h2>Notes</h2>
-      <nav id="side-nav-bar">
-
-      </nav>
-    </aside>
+    {{sidebar}}
 
     <!-- Main content on frontpage  -->
 
     <main id="main-section" class="">
-
+      {{noteContent}}
     </main>
   </div>
 
@@ -55,9 +39,11 @@
 
 
  
-  <script src="assets/js/header.js"></script>
-  <script type="module" src="assets/js/side_bar.js"></script>
-  <script type="module" src="assets/js/frontpage.js"></script>
+
+ <script>
+    hljs.highlightAll();
+</script>
+  <script type="module" src="/assets/js/frontpage.js"></script>
 </body>
 
 </html>
