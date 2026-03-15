@@ -1,34 +1,36 @@
 {
-  "name": "mandatory-1-node.js---documentation-site",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "type": "module",
-  "scripts": {
-    "start-dev": "cross-env PORT=8080 NODE_ENV=DEV node app.js",
-    "start-prod": "cross-env PORT=80 node app.js",
-    "tw": "npx tailwindcss -i tailwind/input.css -o public/assets/css/main.css --watch"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gustavtjac/Mandatory-1-node.js---Documentation-site.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/gustavtjac/Mandatory-1-node.js---Documentation-site/issues"
-  },
-  "homepage": "https://github.com/gustavtjac/Mandatory-1-node.js---Documentation-site#readme",
-  "dependencies": {
-    "cross-env": "^10.1.0",
-    "express": "^5.2.1",
-    "marked": "^17.0.4"
-  },
-  "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@tailwindcss/cli": "^4.2.1",
-    "eslint": "^10.0.2",
-    "globals": "^17.4.0",
-    "tailwindcss": "^4.2.1"
-  }
+    "name": "mandatory-1-node.js---documentation-site",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "type": "module",
+    "scripts": {
+        "start-dev": "cross-env PORT=8080 NODE_ENV=DEV node app.js",
+        "start-prod": "cross-env PORT=80 node app.js",
+        "tw": "npx tailwindcss -i tailwind/input.css -o public/assets/css/main.css --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gustavtjac/Mandatory-1-node.js---Documentation-site.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/gustavtjac/Mandatory-1-node.js---Documentation-site/issues"
+    },
+    "homepage": "https://github.com/gustavtjac/Mandatory-1-node.js---Documentation-site#readme",
+    "dependencies": {
+        "cross-env": "^10.1.0",
+        "express": "^5.2.1",
+        "marked": "^17.0.4"
+    },
+    "devDependencies": {
+        "@eslint/js": "^10.0.1",
+        "@tailwindcss/cli": "^4.2.1",
+        "eslint": "^10.0.2",
+        "eslint-config-prettier": "^10.1.8",
+        "globals": "^17.4.0",
+        "prettier": "^3.8.1",
+        "tailwindcss": "^4.2.1"
+    }
 }

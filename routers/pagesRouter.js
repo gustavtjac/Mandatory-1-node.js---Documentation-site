@@ -1,4 +1,4 @@
-"use strict"
+'use strict';
 import { Router } from 'express';
 const router = Router();
 
@@ -6,7 +6,7 @@ import { frontpagePage, aboutPage, notePages } from '../util/pagesUtil.js';
 
 //___________________________SITES_________________________________________
 router.get('/', (req, res) => {
-    res.send(frontpagePage)
+    res.send(frontpagePage);
 });
 
 router.get('/notes/:note', (req, res) => {
@@ -15,7 +15,7 @@ router.get('/notes/:note', (req, res) => {
     const page = notePages.get(noteIdentifier);
 
     if (!page) {
-        if (!page) return res.status(404).send({ data: { error: "Could not find note" } });
+        if (!page) return res.status(404).send({ data: { error: 'Could not find note' } });
     }
 
     res.send(page);

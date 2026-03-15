@@ -15,7 +15,7 @@
     @apply text-2xl font-extrabold text-gray-900 dark:text-white mt-1 tracking-tight;
 }
 
-#course-section>p {
+#course-section > p {
     @apply text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-6;
 }
 
