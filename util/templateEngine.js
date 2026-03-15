@@ -1,16 +1,15 @@
+"use strict"
 import fs from 'fs'
 import { createAllSideBarNoteOptions } from './sideBarUtil.js';
-import { getAllNotes, getNote} from './notesUtil.js';
+import { getAllNoteNames} from './notesUtil.js';
 
 
 
-export function constructPage(page, note){
+export function constructPage(page, note) {
 
     const header = readPage('./public/components/header/header.html');
-    const sidebar = readPage('./public/components/sidebar/sidebar.html').replace("{{notes}}", createAllSideBarNoteOptions(getAllNotes()));
+    const sidebar = readPage('./public/components/sidebar/sidebar.html').replace("{{notes}}", createAllSideBarNoteOptions(getAllNoteNames()));
    
-
-
     return page
     .replaceAll('{{header}}', header)
     .replaceAll('{{sidebar}}', sidebar)

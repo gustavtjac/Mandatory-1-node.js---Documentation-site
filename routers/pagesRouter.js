@@ -1,3 +1,4 @@
+"use strict"
 import { Router } from 'express';
 const router = Router();
 
@@ -11,20 +12,17 @@ router.get('/', (req, res) => {
 router.get('/notes/:note', (req, res) => {
     const noteIdentifier = parseInt(req.params.note);
 
-    const page = notePages.get(noteIdentifier)
+    const page = notePages.get(noteIdentifier);
 
     if (!page) {
-        if (!page) return res.status(404).send({
-            data: {
-                error: "Could not find note"
-            }
-        });
+        if (!page) return res.status(404).send({ data: { error: "Could not find note" } });
     }
-    res.send(page)
-})
+
+    res.send(page);
+});
 
 router.get('/about', (req, res) => {
-    res.send(aboutPage)
+    res.send(aboutPage);
 });
 
 export default router;

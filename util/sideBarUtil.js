@@ -1,3 +1,4 @@
+"use strict"
 export function createAllSideBarNoteOptions(notes) {
 
     const sortedNotes = notes.sort((a, b) => {

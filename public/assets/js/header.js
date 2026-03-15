@@ -1,3 +1,4 @@
+"use strict"
 const darkModeToggleButton = document.getElementById("theme-toggle");
 
 if (localStorage.getItem("theme") === "dark") {
