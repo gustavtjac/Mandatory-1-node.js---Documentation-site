@@ -3,8 +3,6 @@ import fs from 'fs'
 import { createAllSideBarNoteOptions } from './sideBarUtil.js';
 import { getAllNoteNames} from './notesUtil.js';
 
-
-
 export function constructPage(page, note) {
 
     const header = readPage('./public/components/header/header.html');
@@ -16,7 +14,6 @@ export function constructPage(page, note) {
     .replaceAll('{{noteContent}}', note || 'Note not written yet')
 
 }
-
 
 export function readPage(path) {
    return fs.readFileSync(path,'UTF-8').toString();
