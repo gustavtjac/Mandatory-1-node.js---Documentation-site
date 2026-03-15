@@ -7,8 +7,8 @@ const app = express();
 app.use(express.static('public'));
 
 // use pagesRouter
-import pageRouter from './routers/pagesRouter.js'; 
-app.use(pageRouter)
+import pageRouter from './routers/pagesRouter.js';
+app.use(pageRouter);
 
 const PORT = process.env.PORT || 8080;
 

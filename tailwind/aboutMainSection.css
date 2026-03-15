@@ -74,3 +74,11 @@
 #about-section p {
     @apply text-sm text-gray-500 dark:text-gray-400 leading-relaxed;
 }
+
+#social-links {
+    @apply flex gap-4 mt-3;
+}
+
+#social-links img {
+    @apply w-7 h-6 opacity-70 hover:opacity-100 transition-opacity duration-150;
+}
